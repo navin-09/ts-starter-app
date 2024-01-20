@@ -13,7 +13,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { useNavigate } from "react-router-dom";
 
-const pages = ["Home", "Contact Us", "About Us"];
+const pages = ["Home", "ContactUs", "AboutUs"];
 const settings = ["Your Profile", "Logout"];
 interface User {
   fullName: string;
@@ -50,7 +50,7 @@ function NavBar() {
   };
 
   return (
-    <AppBar position="fixed" color="primary">
+    <AppBar position="sticky" overflow-y="auto" color="primary">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <IconButton
@@ -122,7 +122,7 @@ function NavBar() {
                   onClick={() => navigate("/signup")}
                   sx={{ textTransform: "none" }}
                 >
-                  Sign Up
+                  SignUp
                 </Button>
                 <Button
                   color="secondary"
@@ -132,7 +132,7 @@ function NavBar() {
                   }}
                   sx={{ textTransform: "none" }}
                 >
-                  Sign In
+                  SignIn
                 </Button>
               </>
             )}
