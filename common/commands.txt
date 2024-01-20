@@ -1,0 +1,15 @@
+1. Creating a Migration:
+npm run migration:create user
+
+2. Running Migrations:
+typeorm migration:run
+
+3. Reverting Migrations:
+typeorm migration:revert
+
+4. Generating a Migration from Existing Schema:
+typeorm migration:generate -n <MigrationName>
+
+5. Showing Applied Migrations:
+typeorm migration:show
+
