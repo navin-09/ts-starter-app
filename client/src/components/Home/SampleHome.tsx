@@ -17,7 +17,7 @@ const SampleHomePage: React.FC = () => (
     <Typography variant="body1">
       This is a basic React home page built with Material UI and TypeScript.
     </Typography>
-    <Button variant="contained" color="primary">
+    <Button variant="contained" color="secondary">
       Get Started
     </Button>
   </Box>

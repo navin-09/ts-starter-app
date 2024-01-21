@@ -4,10 +4,10 @@ function theme() {
     palette: {
       mode: "light",
       primary: {
-        main: "#11235A",
+        main: "#4F6F52",
       },
       secondary: {
-        main: "#F6ECA9",
+        main: "#86A789",
       },
     },
     typography: {

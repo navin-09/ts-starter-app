@@ -3,7 +3,6 @@ import {
   Grid,
   Box,
   Typography,
-  Container,
   Link,
   Button,
   TextField,
@@ -15,17 +14,14 @@ import {
 } from "@mui/material";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import customImage from "../../../assets/login.jpg";
+import { signup } from "../../ApiService";
 
 export default function SignUpSample() {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      firstName: data.get("firstName"),
-      lastName: data.get("lastName"),
-      email: data.get("email"),
-      password: data.get("password"),
-    });
+    const res = await signup(data);
+    console.log({ res });
   };
 
   return (
@@ -132,7 +128,11 @@ export default function SignUpSample() {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="#" variant="body2">
+                <Link
+                  href="#"
+                  variant="body2"
+                  sx={{ backgroundColor: "secondary" }}
+                >
                   Already have an account? Sign in
                 </Link>
               </Grid>

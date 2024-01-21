@@ -12,6 +12,9 @@ const app = express();
 app.use(express.json(), express.urlencoded({ extended: true }), cors());
 
 app.use("/", routes);
+app.post("/hi", () => {
+  console.log("hi....");
+});
 // Use the database connection
 connection
   .initialize()

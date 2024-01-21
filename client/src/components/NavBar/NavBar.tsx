@@ -12,6 +12,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { useNavigate } from "react-router-dom";
+import MyLogo from "../../assets/favicon2.png";
 
 const pages = ["Home", "ContactUs", "AboutUs"];
 const settings = ["Your Profile", "Logout"];
@@ -53,14 +54,7 @@ function NavBar() {
     <AppBar position="sticky" overflow-y="auto" color="primary">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <IconButton
-            size="large"
-            aria-label="navigation menu"
-            onClick={handleOpenNavMenu}
-            color="inherit"
-          >
-            <MenuIcon />
-          </IconButton>
+          <img src={MyLogo} alt="Your Brand" style={{ height: "40px" }} />
           <Box
             sx={{
               flexGrow: 1,
@@ -74,7 +68,10 @@ function NavBar() {
                 color="secondary"
                 key={page}
                 onClick={() => navigate(`/${page.toLowerCase()}`)}
-                sx={{ textTransform: "none" }}
+                sx={{
+                  textTransform: "none",
+                  color: "black",
+                }}
               >
                 {page}
               </Button>
@@ -120,7 +117,7 @@ function NavBar() {
                 <Button
                   color="secondary"
                   onClick={() => navigate("/signup")}
-                  sx={{ textTransform: "none" }}
+                  sx={{ textTransform: "none", color: "black" }}
                 >
                   SignUp
                 </Button>
@@ -130,7 +127,11 @@ function NavBar() {
                     navigate("/signin");
                     handleCloseNavMenu();
                   }}
-                  sx={{ textTransform: "none" }}
+                  sx={{
+                    textTransform: "none",
+                    color: "black",
+                    ":hover": { backgroundColor: "secondary" },
+                  }}
                 >
                   SignIn
                 </Button>
