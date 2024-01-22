@@ -1,8 +1,7 @@
 import axios from "axios";
-// import dotenv from "dotenv";
-// dotenv.config();
-
-const baseUrl = "http://localhost:3001/api";
+import { REACT_APP_API_URL } from "../../constant";
+const baseUrl = REACT_APP_API_URL; // Update variable name
+console.log(`baseUrl: ${baseUrl}`);
 const API_URL = `${baseUrl}/signup`;
 // console.log({ API_URL });
 

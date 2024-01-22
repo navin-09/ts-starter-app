@@ -11,10 +11,7 @@ const app = express();
 // Use express middleware
 app.use(express.json(), express.urlencoded({ extended: true }), cors());
 
-app.use("/", routes);
-app.post("/hi", () => {
-  console.log("hi....");
-});
+app.use("/api", routes);
 // Use the database connection
 connection
   .initialize()

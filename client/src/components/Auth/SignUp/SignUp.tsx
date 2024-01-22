@@ -18,7 +18,7 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import flags from "react-phone-number-input/flags";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import theme from "../../../theme";
+import customImage from "../../../assets/login.jpg";
 
 export default function SignUp() {
   const [formData, setFormData] = React.useState({
@@ -151,7 +151,7 @@ export default function SignUp() {
         sm={4}
         md={7}
         sx={{
-          backgroundImage: "url(https://source.unsplash.com/random?nature)",
+          backgroundImage: `url(${customImage})`, // Use the imported image
           backgroundRepeat: "no-repeat",
           backgroundColor: (t) =>
             t.palette.mode === "light"
